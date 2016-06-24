@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/image/favicon.ico" media="screen" />
 
-<title><?php bloginfo('name'); ?></title>
+<title><?php bloginfo('name'); ?> - 折而不挠，终不为下</title>
 
 <!-- Bootstrap -->
 <link href="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -81,7 +81,7 @@
                 <p><?php echo get_the_messikiller_excerpt(); ?></p>
             </div>
             <div class="post-permalink">
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm">阅读全文</a>
+                <a href="<?php the_permalink(); ?>" id="detail-btn"><i class="fa fa-search"></i>&nbsp;阅读全文</a>
             </div>
             <footer class="poster-footer clearfix"></footer>
         </article>

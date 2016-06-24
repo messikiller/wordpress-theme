@@ -7,6 +7,21 @@ html, body{
 	letter-spacing: 0.25px;
 }
 
+#detail-btn{
+	display: inline-block;
+	padding: 6px 12px;
+	margin: 0px;
+	border-radius: 0px;
+	background-color: #0070cc;
+	color: white;
+	font-size: 12px;
+}
+
+#detail-btn:hover{
+	background-color: #2a8fe2;
+	transition: all 0.2s ease-in-out 0s;
+}
+
 /*自定义代码块样式*/
 pre{
 	background-color: #F5F5F5;
@@ -14,7 +29,8 @@ pre{
 }
 
 code, kbd, pre, samp{
-	font-family: Menlo,Monaco,Consolas,"微软雅黑" !important;
+	/*font-family: Menlo,Monaco,Consolas,"微软雅黑" !important;*/
+	font-family: Consolas,"微软雅黑" !important;
 }
 
 /*自定义其他标签样式*/
@@ -471,6 +487,12 @@ ol.commentlist{
 
 .my-calendar #wp-calendar caption{
 	text-align: center;
+	color: black;
+	font-weight: bold;
+	background-color: #e8e8e8;
+	border-top: 1px solid #D8D8D8;
+	border-left: 1px solid #D8D8D8;
+	border-right: 1px solid #D8D8D8;
 }
 
 .my-calendar #wp-calendar tfoot{
@@ -491,11 +513,19 @@ ol.commentlist{
 	height: 30px;
 }
 
+.my-calendar table th{
+	background-color: #e8e8e8;
+}
+
 .my-calendar table td#today{
-	background-color: #399AEF;
-	border: 1px solid #399AEF;
+	background-color: #0070cc;
 	color: white;
 }
+
+.my-calendar table td#today a{
+        color: white;
+}
+
 
 /*tag-cloud*/
 .my-tag-cloud a.label{

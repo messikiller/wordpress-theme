@@ -404,5 +404,25 @@ function wp_code_highlight_filter($content) {
 add_filter('the_content', 'wp_code_highlight_filter', 2);
 add_filter('comment_text', 'wp_code_highlight_filter', 2);
 
+/**
+ * 获取当前日期和发工资日期间的差距
+ */
+function salary_distance()
+{
+	$c_time_arr = getdate();
 
+	if ($c_time_arr['mon'] == 12) {
+		$next_month = 1;
+	} else {
+		$next_month = $c_time_arr['mon'] + 1;
+	}
+
+	$c_timestamp = mktime(0, 0, 0, $c_time_arr['mon'], $c_time_arr['mday'], $c_time_arr['year']);
+	$n_timestamp = mktime(0, 0, 0, $next_month, 1, $c_time_arr['year']);
+
+	$delta_day = ceil(($n_timestamp - $c_timestamp) / (24 * 60 * 60));
+
+	$r = '距离发工资还有' . $delta_day . '天喔 (*_*)';
+	return $r;
+}
 ?>

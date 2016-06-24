@@ -40,7 +40,10 @@
     </div>
 
     <div class="mywidget">
-        <h4 class="mywidget-title"><i class="fa fa-calendar"></i>&nbsp;&nbsp;日历</h4>
+        <h4 class="mywidget-title">
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;日历
+		<small class="pull-right"><?php echo salary_distance(); ?></small>
+	</h4>
         <div class="mywidget-content my-calendar">
 
             <?php
