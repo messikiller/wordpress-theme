@@ -67,34 +67,7 @@
 
             <?php if ( $user_ID ) : ?>
 
-                <p><?php print '登录者：'; ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>&nbsp;&nbsp;<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="退出"><?php print '[ 退出 ]'; ?></a>
-
-            <?php elseif ( '' != $comment_author ): ?>
-
-                <div class="author"><?php printf(__('欢迎回来 <strong>%s</strong>'), $comment_author); ?>
-                    <a href="javascript:toggleCommentAuthorInfo();" id="toggle-comment-author-info">[ 更改 ]</a>
-                </div>
-                <script type="text/javascript" charset="utf-8">
-                    //<![CDATA[
-                    var changeMsg = "[ 更改 ]";
-                    var closeMsg = "[ 隐藏 ]";
-                    function toggleCommentAuthorInfo() {
-                        jQuery('#comment-author-info').slideToggle('slow', function(){
-                            if ( jQuery('#comment-author-info').css('display') == 'none' ) {
-                                jQuery('#toggle-comment-author-info').text(changeMsg);
-                            } else {
-                                jQuery('#toggle-comment-author-info').text(closeMsg);
-                            }
-                        });
-                    }
-
-                    jQuery(document).ready(function(){
-                        jQuery('#comment-author-info').hide();
-                    });
-
-                </script>
-
-            </p>
+                <p><?php print '登录者：'; ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>&nbsp;&nbsp;<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="退出"><?php print '[ 退出 ]'; ?></a></p>
 
             <?php endif; ?>
 
