@@ -2,12 +2,12 @@
     if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
         die ('Please do not load this page directly. Thanks!');
 
-    if ( post_password_required() ) 
-    { 
+    if ( post_password_required() )
+    {
 ?>
     <div id="comment-box"><p class="nocomments"> 亲，您必须输入密码才能查看评论 </p></div>
-<?php 
-        return; 
+<?php
+        return;
     }
     /* This variable is for alternating comment background */
     $oddcomment = '';
@@ -16,22 +16,22 @@
     <div id="comment-box">
 
 <?php if ($comments) : ?>
-    
-    <h4 id="comments" class="detitle"> 
+
+    <h4 id="comments" class="detitle">
         当前有<?php comments_number('', '1条留言', '%条留言' );?>
         <em></em>
     </h4>
     <ol class="commentlist">
-        <?php wp_list_comments('type=comment&callback=messikiller_comment&end-callback=messikiller_end_comment&max_depth=23'); ?> 
+        <?php wp_list_comments('type=comment&callback=messikiller_comment&end-callback=messikiller_end_comment&max_depth=23'); ?>
     </ol>
 
 <?php else : // this is displayed if there are no comments so far ?>
-        
+
     <!-- If comments are open, but there are no comments. -->
     <h4 id="comments" class="detitle">暂时木有评论啊，等您坐沙发呢！<em></em></h4>
 
 <?php endif; ?>
-    
+
 <?php if ('open' == $post->comment_status) : ?>
     <div id="respond_box">
     <div id="respond">
@@ -62,15 +62,15 @@
         </span>
 
         <?php else : ?>
-        
+
         <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-      
+
             <?php if ( $user_ID ) : ?>
-      
+
                 <p><?php print '登录者：'; ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>&nbsp;&nbsp;<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="退出"><?php print '[ 退出 ]'; ?></a>
-        
+
             <?php elseif ( '' != $comment_author ): ?>
-        
+
                 <div class="author"><?php printf(__('欢迎回来 <strong>%s</strong>'), $comment_author); ?>
                     <a href="javascript:toggleCommentAuthorInfo();" id="toggle-comment-author-info">[ 更改 ]</a>
                 </div>
@@ -91,11 +91,11 @@
                     jQuery(document).ready(function(){
                         jQuery('#comment-author-info').hide();
                     });
-                    
+
                 </script>
-                
+
             </p>
-        
+
             <?php endif; ?>
 
         <?php if ( ! $user_ID ): ?>
@@ -122,22 +122,12 @@
         </div>
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-        <div class="control-group">
-            <label class="control-label col-sm-2" for="url">网址<?php if ($req) echo " *"; ?></label>
-            <div class="controls col-sm-10">
-                <input type="url" name="url" id="url" class="form-control" value="<?php echo $comment_author_url; ?>" placeholder=" "/>
-            </div>
-        </div>
-    </div>
-
         <?php endif; ?>
 
         <div class="clear"></div>
 
     <div class="form-group">
-        <!-- Textarea -->    
+        <!-- Textarea -->
         <div class="control-group">
             <label class="control-label col-sm-2">评论<?php if ($req) echo " *"; ?></label>
             <div class="controls col-sm-10">
@@ -145,7 +135,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="form-group">
         <div class="control-group">
             <label class="control-label col-sm-2"></label>
@@ -156,7 +146,7 @@
     </div>
 
         <?php comment_id_fields(); ?>
-                
+
         <?php do_action('comment_form', $post->ID); ?>
 
     </div><!-- end of form-group -->
