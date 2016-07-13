@@ -80,7 +80,7 @@
         <div class="control-group">
             <label class="control-label col-sm-2" for="author">昵称<?php if ($req) echo " *"; ?></label>
             <div class="controls col-sm-10">
-                <input type="text" name="author" id="author" class="form-control" value="<?php echo $comment_author; ?>" placeholder=" "  required />
+                <input type="text" name="author" id="author" class="form-control" style="border-radius:0px;" value="<?php echo $comment_author; ?>" placeholder=" "  required />
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@
         <div class="control-group">
             <label class="control-label col-sm-2" for="email">邮箱<?php if ($req) echo " *"; ?></label>
             <div class="controls col-sm-10">
-                <input type="email" name="email" id="email" class="form-control" value="<?php echo $comment_author_email; ?>" placeholder=" "  required/>
+                <input type="email" name="email" id="email" class="form-control" style="border-radius:0px;" value="<?php echo $comment_author_email; ?>" placeholder=" "  required/>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@
         <div class="control-group">
             <label class="control-label col-sm-2">评论<?php if ($req) echo " *"; ?></label>
             <div class="controls col-sm-10">
-                <textarea name="comment" class="form-control" id="comment" rows="5" tabindex="4"  placeholder=" " style="width:100%;resize:none;"></textarea>
+                <textarea name="comment" class="form-control" id="comment" rows="5" tabindex="4"  placeholder=" " style="width:100%;resize:none;border-radius:0px;"></textarea>
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@
         <div class="control-group">
             <label class="control-label col-sm-2"></label>
             <div class="controls col-sm-10">
-                <input class="btn btn-primary btn-sm" name="submit" type="submit" id="submit" tabindex="5" value="提 交 [Ctrl+Enter]" />
+                <input class="btn btn-primary" style="border-radius:0px;" name="submit" type="submit" id="submit" tabindex="5" value="提 交 [Ctrl+Enter]" />
             </div>
         </div>
     </div>
