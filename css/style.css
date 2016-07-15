@@ -232,7 +232,7 @@ li{
 	padding-left: 0px;
 	padding-bottom: 5px;
 	border: 1px solid #ebebeb;
-	border-top: 0px; 
+	border-top: 0px;
 	background-color: white;
 	position: absolute;
 	text-align: left;
@@ -374,83 +374,82 @@ li{
 
 /*评论部分样式*/
 
-ol.commentlist{
-	padding: 15px;
-	border: 1px solid #DDD;
+ol.commentlist {
+	padding: 25px;
+	margin: 0px;
 	background-color: white;
-
 }
 
-.comment > .comment-body{
-	border:1px solid #BFBFBF;
-	margin-bottom: 20px;
+ol.commentlist > li.comment {
+	border-bottom: 1px solid #e0e0e0;
 }
 
-.comment > .comment-body > .comment-author{
-	padding: 10px;
-	background-color: #EBEBEB;
+li.comment {
+	margin-bottom: 15px;
+	min-height: 60px;
 }
 
-.comment > .comment-body > .comment-author span{
+li.comment > .comment-author {
+	width: 50px;
+	float: left;
+}
+
+li.comment > .comment-main {
+	padding-left: 50px;
+}
+
+li.comment > .comment-main > .comment-meta > span {
+	font-size: 0.7em;
+	color: #7b7b7b;
 	display: inline-block;
-	line-height:40px;
-	/*font-weight: bold;*/
 }
 
-.comment > .comment-body > .comment-author span.author-name,
-.comment > .comment-body > .comment-author span.author-name >a{
-	color: #337AB7;
-	font-weight: bold;
-}
-
-.comment > .comment-body > .comment-author span.author-name >a:hover{
-	color: #D4423D;
-	font-weight: bold;
-}
-
-.comment > .comment-body > .comment-author span.edit-link{
+li.comment > .comment-main > .comment-meta > span > a {
+	font-size: 0.7em;
+	color: #7b7b7b;
 	display: inline-block;
+}
+
+li.comment > .comment-main > .comment-meta > span.author-name,
+li.comment > .comment-main > .comment-meta > span.author-name > a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #0070cc;
+	padding-left: 5px;
+}
+
+li.comment > .comment-main > .comment-meta > span.date-time {
+	padding: 0px 10px;
+}
+
+li.comment > .comment-main > .comment-meta > span.edit-link,
+li.comment > .comment-main > .comment-meta > span.reply {
 	float: right;
+	padding: 5px 10px;
 }
 
-.comment > .comment-body > .comment-author span.edit-link > a{
-	color: red;
+li.comment > .comment-main > .comment-meta > span.edit-link > a:hover,
+li.comment > .comment-main > .comment-meta > span.reply > a:hover {
+	color: #0070cc;
 }
 
-.comment > .comment-body > .comment-author span.edit-link > a:hover{
-	color: #337AB7;
+li.comment > .comment-main > .comment-content {
+	min-height: 50px;
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 
-.comment > .comment-body > .comment-content{
-	margin: 15px 0px;
-	padding-left: 45px;
-	font-weight: bold;
+li.comment > .comment-main > .comment-content > p {
+	font-size: 15px;
+	color: #666;
 }
 
-.comment > .comment-body > .comment-main-meta{
-	text-align: right;
-
+li.comment > ul.children {
+	padding-left: 10px;
+	margin-left: 30px;
+	border-left: 3px solid #e2e2e2;
 }
-
-.comment > .comment-body > .comment-main-meta > .reply >a{
-	display: inline-block;
-	padding: 10px;
-	background-color: #EBEBEB;
-}
-
-.comment > .comment-body > .comment-main-meta > .reply >a:hover{
-	background-color: #337AB7;
-	color: white;
-}
-
-#respond > img{
-	display: inline-block;
-}
-
-#respond > span{
-	display: inline-block;
-}
-
 
 /*sidebar,widget*/
 .mywidget{
@@ -467,7 +466,7 @@ ol.commentlist{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #EBEBEB;
 	margin-bottom: 20px;
-	position: relative; 
+	position: relative;
 }
 
 .mywidget .mywidget-title::after{
@@ -600,7 +599,7 @@ ol.commentlist{
 
 .footerwidget .footerwidget-title{
 	color: #A8A8A8;
-	padding-bottom: 15px; 
+	padding-bottom: 15px;
 	border-bottom: 1px solid #383838;
 }
 
@@ -650,4 +649,3 @@ ol.commentlist{
 .carousel-indicators li.active{
 	background-color: #D4D4D4;
 }
-

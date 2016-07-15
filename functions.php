@@ -93,7 +93,7 @@ function get_messikiller_tags_cloud()
         $tag_link = get_tag_link($tag->term_id);
 
         $tag_label_style=get_tag_label_style($tag->name);
-                
+
         $html .= "<a href='{$tag_link}' title='{$tag->name}' class='label {$tag_label_style}'>{$tag->name}</a>";
     }
     echo $html;
@@ -132,21 +132,21 @@ function setPostViews($postID) {
 function get_previous_next_link()
 {
     $next_post = get_next_post();
-    if (!empty( $next_post )): 
+    if (!empty( $next_post )):
 ?>
 <span class="privious-link">
-    <span class="label label-success"><i class="fa fa-hand-o-left"></i>上一篇：</span>&nbsp;<a title="<?php echo $next_post->post_title; ?>" href="<?php echo get_permalink( $next_post->ID ); ?>" rel="external nofollow" ><?php echo $next_post->post_title; ?></a>    
+    <span class="label label-success"><i class="fa fa-hand-o-left"></i>上一篇：</span>&nbsp;<a title="<?php echo $next_post->post_title; ?>" href="<?php echo get_permalink( $next_post->ID ); ?>" rel="external nofollow" ><?php echo $next_post->post_title; ?></a>
 </span>
-<?php 
+<?php
     endif;
     $prev_post = get_previous_post();
-    if (!empty( $prev_post )): 
+    if (!empty( $prev_post )):
 ?>
 <span class="next-link">
     <span class="label label-success"><i class="fa fa-hand-o-right"></i>下一篇：</span>&nbsp;<a title="<?php echo $prev_post->post_title; ?>" href="<?php echo get_permalink( $prev_post->ID ); ?>" rel="external nofollow" ><?php echo $prev_post->post_title; ?></a>
 </span>
-<?php 
-    endif; 
+<?php
+    endif;
 }
 
 /*
@@ -200,12 +200,12 @@ function general_messikiller_nav_menu()
         'menu'            => 'header-menu',
         //最外层容器标签名
         'container'       => 'div',
-        //最外层容器class名 
-        'container_class' => 'collapse navbar-collapse', 
+        //最外层容器class名
+        'container_class' => 'collapse navbar-collapse',
         //最外层容器id值
         'container_id'    => 'my-main-menu',
         //ul标签class
-        'menu_class'      => 'my-menu', 
+        'menu_class'      => 'my-menu',
         //ul标签id
         'menu_id'         => '',
         //是否打印，默认是true，如果想将导航的代码作为赋值使用，可设置为false
@@ -224,7 +224,7 @@ function general_messikiller_nav_menu()
         //显示的菜单层数，默认0，0是显示所有层
         'depth'           => 0,
         //调用一个对象定义显示导航菜单
-        'walker'          => '' 
+        'walker'          => ''
     );
 
     $current_url = curPageURL();
@@ -255,10 +255,10 @@ function par_pagenavi($range = 3)
         }
 
         if ($paged==1) {
-            echo '<li class="disabled"><a href="'.get_pagenum_link($paged-1).'" aria-label="Privious"><span aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span></a></li>'; 
+            echo '<li class="disabled"><a href="'.get_pagenum_link($paged-1).'" aria-label="Privious"><span aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span></a></li>';
         }
         else{
-            echo '<li><a href="'.get_pagenum_link($paged-1).'" aria-label="Privious"><span aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span></a></li>';  
+            echo '<li><a href="'.get_pagenum_link($paged-1).'" aria-label="Privious"><span aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span></a></li>';
         }
 
         if($max_page > $range){
@@ -274,7 +274,7 @@ function par_pagenavi($range = 3)
             elseif($paged >= ($max_page - ceil(($range/2)))){
                 for($i = $max_page - $range; $i <= $max_page; $i++){
                     echo "<li";
-                    if($i==$paged){ 
+                    if($i==$paged){
                         echo " class='active'";
                     }
                     echo "><a href='" . get_pagenum_link($i) ."'>$i</a></li>";;
@@ -282,12 +282,12 @@ function par_pagenavi($range = 3)
             }
             elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))){
                 for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){
-                    echo "<li"; 
+                    echo "<li";
                     if($i==$paged) {
                         echo " class='active'";
                     }
                     echo"><a href='" . get_pagenum_link($i) ."'>$i</a></li>";
-                    
+
                 }
             }
         }
@@ -306,72 +306,69 @@ function par_pagenavi($range = 3)
         }
         else{
             echo '<li><a href="'.get_pagenum_link($paged+1).'" aria-label="Next"><span aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span></a></li>';
-        }  
-    }  
+        }
+    }
 }
 
-function messikiller_comment($comment, $args, $depth) 
+function messikiller_comment($comment, $args, $depth)
 {
     $GLOBALS['comment'] = $comment;
     global $commentcount,$wpdb, $post;
-    if(!$commentcount) 
-    { 
+    if(!$commentcount)
+    {
         $comments = $wpdb->get_results("SELECT * FROM $wpdb->comments WHERE comment_post_ID = $post->ID AND comment_type = '' AND comment_approved = '1' AND !comment_parent");
         $cnt = count($comments);
         $page = get_query_var('cpage');
         $cpp=get_option('comments_per_page');
-        if (ceil($cnt / $cpp) == 1 || ($page > 1 && $page  == ceil($cnt / $cpp))) 
+        if (ceil($cnt / $cpp) == 1 || ($page > 1 && $page  == ceil($cnt / $cpp)))
         {
             $commentcount = $cnt + 1;
-        } 
-        else 
+        }
+        else
         {
             $commentcount = $cpp * $page + 1;
         }
     }
 ?>
 <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>" itemprop="reviews" itemscope itemtype="http://schema.org/Review" >
-    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
     <?php $add_below = 'div-comment'; ?>
-        <div class="comment-author">         
-            <?php              
-                $username=get_comment_author( $comment_ID );
-                if ( $username=='messikiller' )
-                {
-            ?>
-                <img alt="messikiller" src="<?php echo get_template_directory_uri(); ?>/image/host.png" class="img-circle" height="40" width="40"></img>
-            <?php
-                }
-                else{
-            ?>
-                <img alt="guest" src="<?php echo get_template_directory_uri(); ?>/image/guest.png" class="img-circle" height="40" width="40"></img>
-            <?php } ?>
-            <span class="common">&nbsp;</span>
+    <div class="comment-author">
+        <?php
+            $username=get_comment_author( $comment_ID );
+            if ( $username=='messikiller' )
+            {
+        ?>
+            <img alt="messikiller" src="<?php echo get_template_directory_uri(); ?>/image/host.png" class="img-circle" height="40" width="40"></img>
+        <?php
+            }
+            else{
+        ?>
+            <img alt="guest" src="<?php echo get_template_directory_uri(); ?>/image/guest.png" class="img-circle" height="40" width="40"></img>
+        <?php } ?>
+    </div>
+    <div class="comment-main">
+        <div class="comment-meta">
             <span class="author-name"><?php comment_author_link() ?></span>
-            <span class="common">发表于</span>
-            <span class="date-time"><?php comment_date("Y年m月d日").comment_time(); ?></span>
-            <span class="common">:</span>
-            <span class="edit-link"><?php edit_comment_link('编辑','&nbsp;&nbsp;',''); ?></span>
-            <?php if ( $comment->comment_approved == '0' ) : ?>
-                <span class="check-info">您的评论正在等待审核中...</span>      
-            <?php endif; ?>
-        </div>
-    
-        <div class="comment-content">
-            <?php comment_text() ?>
-        </div>
-        <div class="comment-main-meta">
+            <span class="date-time"><?php messikiller_comment_time(); ?></span>
+            <span class="edit-link"><?php edit_comment_link('<i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;编辑'); ?></span>
+
             <span class="reply">
-                <?php 
-                    comment_reply_link(array_merge( $args, array('reply_text' => '回复', 'add_below' =>$add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))); 
+                <?php
+                    comment_reply_link(array_merge( $args, array('reply_text' => '<i class="fa fa-comments" aria-hidden="true"></i>&nbsp;回复', 'add_below' =>$add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'])));
                 ?>
             </span>
         </div>
+
+        <div class="comment-content">
+            <?php comment_text() ?>
+        </div>
+
     </div>
+
 <?php
 }
 
-function messikiller_end_comment() 
+function messikiller_end_comment()
 {
     echo '</li>';
 };
@@ -390,6 +387,37 @@ QTags.addButton( 'highlight_code', 'HighlightCode', '<pre><code class="php">\n',
 }
 add_action('admin_print_footer_scripts', 'add_highlight_code_button' );
 
+function messikiller_comment_time()
+{
+    date_default_timezone_set('Asia/Shanghai');
+    $Y=get_comment_date("Y");
+    $m=get_comment_date("m");
+    $d=get_comment_date("d");
+    $H=get_comment_time("H");
+    $i=get_comment_time("i");
+    $s=get_comment_time("s");
+
+    $o_timestamp = mktime($H, $i, $s, $m, $d, $Y);
+    $c_timestamp = time();
+
+    $delta_timestamp = $c_timestamp - $o_timestamp;
+    $delta_day  = floor($delta_timestamp / (24*60*60) );
+    $delta_hour = floor($delta_timestamp / (60*60) );
+    $delta_min  = floor($delta_timestamp / 60 );
+
+    if ($delta_timestamp < 60) {
+        $str = $delta_timestamp . '秒前';
+    } elseif ($delta_timestamp < (60*60) && $delta_timestamp >= (60) ) {
+        $str = $delta_min . '分钟前';
+    } elseif ($delta_timestamp < (24*60*60) && $delta_timestamp >= (60*60) ) {
+        $str = $delta_hour . '小时前';
+    } elseif ($delta_timestamp < (7*34*60*60) && $delta_timestamp >= (24*60*60) ) {
+        $str = $delta_day . '天前';
+    } else {
+        $str = date('Y年m月d日');
+    }
+    echo $str;
+}
 
 //处理<pre><code>标签中高亮代码片段特殊字符转义和代码开头匹配换行的问题
 function wch_stripslashes($code){
