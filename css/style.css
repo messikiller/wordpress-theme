@@ -451,6 +451,22 @@ li.comment > ul.children {
 	border-left: 3px solid #e2e2e2;
 }
 
+#respond {
+	margin-top: 20px;
+}
+
+#respond .comment-form-header > h4 {
+	display: inline-block;
+}
+
+#comment-author-info {
+	margin-top: 10px;
+}
+
+#comment-author-info label {
+	max-width: 80px;
+}
+
 /*sidebar,widget*/
 .mywidget{
 	margin-bottom: 20px;

@@ -35,19 +35,20 @@
 <?php if ('open' == $post->comment_status) : ?>
     <div id="respond_box">
     <div id="respond">
-        <?php
-            if ( is_user_logged_in() ) :
-        ?>
-            <img alt="messikiller" src="<?php echo get_template_directory_uri(); ?>/image/host.png" class="img-circle" height="40" width="40"></img>
-        <?php
-            else:
-        ?>
-            <img alt="messikiller" src="<?php echo get_template_directory_uri(); ?>/image/guest.png" class="img-circle" height="40" width="40"></img>
-        <?php
-            endif;
-        ?>
-        <span>&nbsp;</span>
-        <span><h4>发表评论：</h4></span>
+        <div class="comment-form-header">
+            <?php
+                if ( is_user_logged_in() ) :
+            ?>
+                <img alt="messikiller" src="<?php echo get_template_directory_uri(); ?>/image/host.png" class="img-circle" height="40" width="40"></img>
+            <?php
+                else:
+            ?>
+                <img alt="messikiller" src="<?php echo get_template_directory_uri(); ?>/image/guest.png" class="img-circle" height="40" width="40"></img>
+            <?php
+                endif;
+            ?>
+            <h4>&nbsp发表评论：</h4>
+        </div>
         <span class="cancel-comment-reply">
             <small><?php cancel_comment_reply_link(); ?></small>
         </span>
