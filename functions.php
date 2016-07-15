@@ -414,7 +414,7 @@ function messikiller_comment_time()
     } elseif ($delta_timestamp < (7*34*60*60) && $delta_timestamp >= (24*60*60) ) {
         $str = $delta_day . '天前';
     } else {
-        $str = date('Y年m月d日');
+        $str = date('Y年m月d日', $o_timestamp);
     }
     echo $str;
 }
