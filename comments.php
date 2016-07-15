@@ -113,7 +113,7 @@
         <div class="control-group">
             <label class="control-label col-sm-2"></label>
             <div class="controls col-sm-10">
-                <input class="btn btn-primary" style="border-radius:0px;" name="submit" type="submit" id="submit" tabindex="5" value="提 交 [Ctrl+Enter]" />
+                <input class="btn btn-sm btn-primary" style="border-radius:0px;" name="submit" type="submit" id="submit" tabindex="5" value="提 交 评 论" />
             </div>
         </div>
     </div>
