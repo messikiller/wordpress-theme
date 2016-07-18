@@ -399,13 +399,13 @@ li.comment > .comment-main {
 }
 
 li.comment > .comment-main > .comment-meta > span {
-	font-size: 0.7em;
+	font-size: 12px;
 	color: #7b7b7b;
 	display: inline-block;
 }
 
 li.comment > .comment-main > .comment-meta > span > a {
-	font-size: 0.7em;
+	font-size: 13px;
 	color: #7b7b7b;
 	display: inline-block;
 }
@@ -442,7 +442,6 @@ li.comment > .comment-main > .comment-content {
 
 li.comment > .comment-main > .comment-content > p {
 	font-size: 14px;
-	color: #666;
 }
 
 li.comment > ul.children {
