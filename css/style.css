@@ -549,6 +549,7 @@ li.comment > ul.children {
 	font-weight: bold;
 	margin: 5px;
 	padding: 8px;
+	border-radius: 0px;
 }
 
 .my-tag-cloud a.label:hover{
