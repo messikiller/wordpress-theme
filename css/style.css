@@ -3,7 +3,8 @@ html, body{
 	background: #EBEBEB none repeat scroll 0% 0%;
 	/*font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;*/
 	/*font-family: "Lucida Grande","Lucida Sans","Arial","sans-serif","Microsoft YaHei";*/
-	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+	/*font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;*/
+	font-family: NotoSansHans-Regular,AvenirNext-Regular,arial,Hiragino Sans GB,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
 	letter-spacing: 0.25px;
 }
 
@@ -306,18 +307,17 @@ li{
 
 .post .post-content p{
 	font-family: NotoSansHans-Regular,AvenirNext-Regular,arial,Hiragino Sans GB,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
-	color: #333333;
 	text-indent: 2em;
-	line-height: 25px;
-	font-size: 14px;
+	line-height: 27px;
+	font-size: 15px;
 	margin: 0px 0px 10px;
 	word-break: break-all;
 }
 
 .post .post-content span.title1{
 	display: block;
-	text-indent: 0px;
-	font-size: 1.5em;
+	text-indent: 10px;
+	font-size: 1.3em;
 	font-weight: bold;
 	border-bottom: 2px solid #eee;
 	padding-bottom: 0.4em;
@@ -516,7 +516,7 @@ li.comment > ul.children {
 	text-align: center;
 	color: black;
 	font-weight: bold;
-	background-color: #e8e8e8;
+	background-color: #f5f5f5;
 	border-top: 1px solid #D8D8D8;
 	border-left: 1px solid #D8D8D8;
 	border-right: 1px solid #D8D8D8;
@@ -541,7 +541,7 @@ li.comment > ul.children {
 }
 
 .my-calendar table th{
-	background-color: #e8e8e8;
+	background-color: #f5f5f5;
 }
 
 .my-calendar table td#today{
