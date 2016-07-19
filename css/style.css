@@ -305,11 +305,24 @@ li{
 }
 
 .post .post-content p{
+	font-family: NotoSansHans-Regular,AvenirNext-Regular,arial,Hiragino Sans GB,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+	color: #333333;
 	text-indent: 2em;
 	line-height: 25px;
 	font-size: 14px;
 	margin: 0px 0px 10px;
 	word-break: break-all;
+}
+
+.post .post-content span.title1{
+	display: block;
+	text-indent: 0px;
+	font-size: 1.5em;
+	font-weight: bold;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 0.4em;
+	margin-top: 1.0em;
+	margin-bottom: 16px;
 }
 
 .post .post-content p code{

@@ -380,6 +380,7 @@ function add_highlight_code_button()
 
 <script type="text/javascript">
 QTags.addButton( 'highlight_code', 'HighlightCode', '<pre><code class="php">\n','\n</code></pre>' );
+QTags.addButton( 'title-1', 'title-1', '<span class="title1">','</span>' );
 </script>
 
 <?php
