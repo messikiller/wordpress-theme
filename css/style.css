@@ -517,7 +517,7 @@ li.comment > ul.children {
 	text-align: center;
 	color: black;
 	font-weight: bold;
-	background-color: #f5f5f5;
+	background-color: #f8f8f8;
 	border-top: 1px solid #D8D8D8;
 	border-left: 1px solid #D8D8D8;
 	border-right: 1px solid #D8D8D8;
@@ -542,7 +542,7 @@ li.comment > ul.children {
 }
 
 .my-calendar table th{
-	background-color: #f5f5f5;
+	background-color: #f8f8f8;
 }
 
 .my-calendar table td#today{
