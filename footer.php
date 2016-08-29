@@ -38,8 +38,8 @@
                         <a href="https://cs.phphub.org/" target="_blank" class="label mylabel-4">laravel速查表</a>
                         <a href="http://blog.too2.net:8080" target="_blank" class="label mylabel-1">辛碌力成</a>
                         <a href="http://www.bootcss.com/" target="_blank" class="label mylabel-2">bootstrap中文网</a>
-                        <a href="http://www.jquery123.com/api/" target="_blank" class="label mylabel-3">jQuery API</a>
-                        <a href="http://www.ghostchina.com/" target="_blank" class="label mylabel-4">Ghost中文网</a>
+                        <a href="http://www.jquery123.com/api/" target="_blank" class="label mylabel-9">jQuery API</a>
+                        <a href="http://www.ghostchina.com/" target="_blank" class="label mylabel-7">Ghost中文网</a>
                         <a href="http://www.w3school.com.cn/" target="_blank" class="label mylabel-6">w3school</a>
                         <a href="http://php.net/manual/zh/" target="_blank" class="label mylabel-5">PHP手册</a>
                         <a href="https://github.com/" target="_blank" class="label mylabel-7">Github</a>
