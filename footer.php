@@ -33,6 +33,9 @@
                 <div class="footerwidget">
                     <h4 class="footerwidget-title"><i class="fa fa-thumbs-up"></i> 博主推荐</h4>
                     <div class="footerwidget-content footer-tag-cloud">
+                        <a href="https://phphub.org/" target="_blank" class="label mylabel-5">PHPHub论坛</a>
+                        <a href="http://laravelacademy.org/" target="_blank" class="label mylabel-3">laravel学院</a>
+                        <a href="https://cs.phphub.org/" target="_blank" class="label mylabel-4">laravel速查表</a>
                         <a href="http://blog.too2.net:8080" target="_blank" class="label mylabel-1">辛碌力成</a>
                         <a href="http://www.bootcss.com/" target="_blank" class="label mylabel-2">bootstrap中文网</a>
                         <a href="http://www.jquery123.com/api/" target="_blank" class="label mylabel-3">jQuery API</a>
@@ -60,7 +63,7 @@
             </div>
 
             <div class="col-sm-1"></div>
-          
+
         </div><!-- end of row -->
     </div><!-- end of container -->
 
