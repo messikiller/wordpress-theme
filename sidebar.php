@@ -1,5 +1,6 @@
 <aside class="col-md-4 mysidebar">
-           
+
+<?php if(is_home()) ?>
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-bookmark"></i>&nbsp;&nbsp;每日一语</h4>
         <div class="mywidget-content">
@@ -7,10 +8,7 @@
             <div id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
                 <ol class="carousel-indicators">
-<!--                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
--->                </ol>   
+            </ol>
                 <!-- 轮播（Carousel）项目 -->
 		<div class="carousel-inner">
                     <div class="item active">
@@ -19,23 +17,10 @@
                             <small class="text-right"><strong>李鸿章</strong></small>
                         </blockquote>
                     </div>
-<!--
-                    <div class="item">
-                        <blockquote>
-                            <h4>惟贤惟德，能服于人</h4>
-                            <small class="text-right"><strong>陈寿·《先主传·三国志》</strong></small>
-                        </blockquote>
-                    </div>
-                    <div class="item">
-                        <blockquote>
-                            <h4>淡泊明志，宁静致远</h4>
-                            <small class="text-right"><strong>诸葛亮· 《诫子书》</strong></small>
-                        </blockquote>
-                    </div>
--->
+
                 </div>
-            </div> 
-        
+            </div>
+
 	</div>
     </div>
 
@@ -52,17 +37,17 @@
 
         </div>
     </div>
-
+<?php } ?>
 
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;文章分类</h4>
         <div class="mywidget-content">
 
             <?php
-		$categories=get_categories(array('orderby' => 'name','order' => 'ASC', 'hide_empty' => true, 'hierarchical' => false)); 
+		$categories=get_categories(array('orderby' => 'name','order' => 'ASC', 'hide_empty' => true, 'hierarchical' => false));
                 foreach ($categories as $category) :
             ?>
-                
+
                 <li>
                     <p>
                         <a href="<?php echo get_category_link( $category->term_id ); ?>">
@@ -80,9 +65,9 @@
         <h4 class="mywidget-title"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;文章归档</h4>
         <div class="mywidget-content">
 
-            <?php 
-                wp_get_archives('type=monthly&before=<p><i class="fa fa-caret-right fa-lg"></i> &after=</p>'); 
-            ?> 
+            <?php
+                wp_get_archives('type=monthly&before=<p><i class="fa fa-caret-right fa-lg"></i> &after=</p>');
+            ?>
 
         </div>
     </div>
