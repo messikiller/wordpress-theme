@@ -1,6 +1,5 @@
 <aside class="col-md-4 mysidebar">
 
-<?php if(is_home($post)) ?>
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-bookmark"></i>&nbsp;&nbsp;每日一语</h4>
         <div class="mywidget-content">
@@ -37,7 +36,6 @@
 
         </div>
     </div>
-<?php } ?>
 
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;文章分类</h4>
