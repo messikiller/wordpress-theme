@@ -1,6 +1,6 @@
 <aside class="col-md-4 mysidebar">
 
-<?php if(is_home()) ?>
+<?php if(is_home($post)) ?>
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-bookmark"></i>&nbsp;&nbsp;每日一语</h4>
         <div class="mywidget-content">
@@ -10,25 +10,25 @@
                 <ol class="carousel-indicators">
             </ol>
                 <!-- 轮播（Carousel）项目 -->
-		<div class="carousel-inner">
-                    <div class="item active">
-                        <blockquote>
-                            <h4>&emsp;&emsp;一万年来谁著史，三千里外欲封侯</h4>
-                            <small class="text-right"><strong>李鸿章</strong></small>
-                        </blockquote>
+    		<div class="carousel-inner">
+                        <div class="item active">
+                            <blockquote>
+                                <h4>&emsp;&emsp;一万年来谁著史，三千里外欲封侯</h4>
+                                <small class="text-right"><strong>李鸿章</strong></small>
+                            </blockquote>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
 
-	</div>
+    	</div>
     </div>
 
     <div class="mywidget">
         <h4 class="mywidget-title">
-		<i class="fa fa-calendar"></i>&nbsp;&nbsp;日历
-		<small class="pull-right"><?php echo salary_distance(); ?></small>
-	</h4>
+    		<i class="fa fa-calendar"></i>&nbsp;&nbsp;日历
+    		<small class="pull-right"><?php echo salary_distance(); ?></small>
+    	</h4>
         <div class="mywidget-content my-calendar">
 
             <?php
