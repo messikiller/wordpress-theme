@@ -81,6 +81,18 @@
         </div>
     </div>
 
+<?php if (is_single()) { ?>
+    <div class="mywidget">
+        <h4 class="mywidget-title">
+    		<i class="fa fa-jpy"></i>&nbsp;&nbsp;打赏
+    		<small class="pull-right">拿出微信扫一扫，打赏作者～</small>
+    	</h4>
+        <div class="mywidget-content my-calendar thumbnail" style="border-width:0px;">
+            <img src="<?php echo get_template_directory_uri(); ?>/image/reward.jpg" alt="扫一扫～" class="img-rounded" />
+        </div>
+    </div>
+<?php } ?>
+
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-cog fa-lg"></i>&nbsp;&nbsp;功能管理</h4>
         <div class="mywidget-content">
