@@ -1,6 +1,6 @@
 <aside class="col-md-4 mysidebar">
 
-<?php if (is_home()) { ?>
+<?php if (! is_single()) { ?>
     <div class="mywidget">
         <h4 class="mywidget-title"><i class="fa fa-bookmark"></i>&nbsp;&nbsp;每日一语</h4>
         <div class="mywidget-content">
