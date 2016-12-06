@@ -442,12 +442,14 @@ function salary_distance()
 
 	if ($c_time_arr['mon'] == 12) {
 		$next_month = 1;
+		$next_year = $c_time_arr['year'] + 1;
 	} else {
 		$next_month = $c_time_arr['mon'] + 1;
+		$next_year = $c_time_arr['year'];
 	}
 
 	$c_timestamp = mktime(0, 0, 0, $c_time_arr['mon'], $c_time_arr['mday'], $c_time_arr['year']);
-	$n_timestamp = mktime(0, 0, 0, $next_month, 1, $c_time_arr['year']);
+	$n_timestamp = mktime(0, 0, 0, $next_month, 1, $next_year);
 
 	$delta_day = ceil(($n_timestamp - $c_timestamp) / (24 * 60 * 60));
 
