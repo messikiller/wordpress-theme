@@ -427,8 +427,10 @@ function wch_stripslashes($code){
         return $code;
 }
 function wp_code_highlight_filter($content) {
-        return preg_replace("/<pre>[\n\r]*<code(.*?)>[\n\r]*(.*?)<\/code>[\n\r]*<\/pre>/ise",
-                "'<pre><code'.wch_stripslashes('$1').'>'.wch_stripslashes('$2').'</code></pre>'", $content);
+	return preg_replace_callback("/<pre>[\n\r]*<code(.*?)>[\n\r]*(.*?)<\/code>[\n\r]*<\/pre>/is", function($match){
+		return '<pre><code'. wch_stripslashes($match[1]) .'>'. wch_stripslashes($match[2]) .'</code></pre>';
+	}, $content);
+
 }
 add_filter('the_content', 'wp_code_highlight_filter', 2);
 add_filter('comment_text', 'wp_code_highlight_filter', 2);
